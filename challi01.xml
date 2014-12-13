@@ -62,5 +62,4 @@
       <block type="movement_stop" id="14"></block>
     </next>
   </block>
-  <block type="movement_left" id="3" x="127" y="195"></block>
 </xml>
