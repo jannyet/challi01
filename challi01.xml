@@ -1,10 +1,10 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_right" id="48" x="182" y="129">
+  <block type="movement_right" id="48" x="222" y="163">
     <next>
       <block type="robot_delay" id="132" inline="true">
         <value name="DELAY">
           <block type="math_number" id="157">
-            <field name="NUM">2000</field>
+            <field name="NUM">4000</field>
           </block>
         </value>
         <next>
@@ -17,7 +17,7 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="movement_left" id="497"></block>
+                  <block type="movement_right" id="517"></block>
                 </statement>
                 <next>
                   <block type="robot_delay" id="323" inline="true">
@@ -36,14 +36,27 @@
                               </block>
                             </value>
                             <next>
-                              <block type="movement_leftmotor" id="203" inline="true">
-                                <value name="MOVLEFT">
-                                  <block type="sensor_object" id="179">
-                                    <field name="OBJECT">LEFTFRONT</field>
-                                  </block>
-                                </value>
+                              <block type="movement_forward" id="527">
                                 <next>
-                                  <block type="movement_stop" id="481"></block>
+                                  <block type="robot_delay" id="547" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="571">
+                                        <field name="NUM">4000</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="movement_leftmotor" id="203" inline="true">
+                                        <value name="MOVLEFT">
+                                          <block type="sensor_object" id="179">
+                                            <field name="OBJECT">LEFTFRONT</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="movement_stop" id="481"></block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
                                 </next>
                               </block>
                             </next>
