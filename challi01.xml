@@ -10,7 +10,17 @@
         <next>
           <block type="movement_forward" id="109">
             <next>
-              <block type="movement_forward" id="130"></block>
+              <block type="movement_forward" id="130">
+                <next>
+                  <block type="movement_leftmotor" id="203" inline="true">
+                    <value name="MOVLEFT">
+                      <block type="sensor_object" id="179">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
             </next>
           </block>
         </next>
