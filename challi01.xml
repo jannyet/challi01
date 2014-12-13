@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_right" id="48" x="99" y="92">
+  <block type="movement_right" id="48" x="182" y="129">
     <next>
       <block type="robot_delay" id="132" inline="true">
         <value name="DELAY">
@@ -8,7 +8,15 @@
           </block>
         </value>
         <next>
-          <block type="movement_left" id="214">
+          <block type="controls_if" id="392" inline="false">
+            <value name="IF0">
+              <block type="sensor_object" id="370">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_forward" id="443"></block>
+            </statement>
             <next>
               <block type="robot_delay" id="323" inline="true">
                 <value name="DELAY">
