@@ -1,49 +1,59 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="1" inline="false" x="111" y="54">
-    <value name="IF0">
-      <block type="sensor_object" id="2">
-        <field name="OBJECT">LEFTSIDE</field>
+  <block type="controls_whileUntil" id="79" inline="false" x="76" y="34">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="87">
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
-    <statement name="DO0">
-      <block type="movement_reverse" id="64">
-        <next>
-          <block type="movement_leftmotor" id="24" inline="true">
-            <value name="MOVLEFT">
-              <block type="sensor_object" id="31">
-                <field name="OBJECT">RIGHTFRONT</field>
-              </block>
-            </value>
+    <statement name="DO">
+      <block type="controls_if" id="1" inline="false">
+        <value name="IF0">
+          <block type="sensor_object" id="2">
+            <field name="OBJECT">LEFTSIDE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_reverse" id="64">
             <next>
-              <block type="robot_delay" id="4" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="5">
-                    <field name="NUM">4000</field>
+              <block type="movement_leftmotor" id="24" inline="true">
+                <value name="MOVLEFT">
+                  <block type="sensor_object" id="31">
+                    <field name="OBJECT">RIGHTFRONT</field>
                   </block>
                 </value>
                 <next>
-                  <block type="movement_rightmotor" id="47" inline="true">
-                    <value name="MOVRIGHT">
-                      <block type="sensor_object" id="54">
-                        <field name="OBJECT">LEFTFRONT</field>
+                  <block type="robot_delay" id="4" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="5">
+                        <field name="NUM">4000</field>
                       </block>
                     </value>
                     <next>
-                      <block type="robot_delay" id="8" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="9">
-                            <field name="NUM">2000</field>
+                      <block type="movement_rightmotor" id="47" inline="true">
+                        <value name="MOVRIGHT">
+                          <block type="sensor_object" id="54">
+                            <field name="OBJECT">LEFTFRONT</field>
                           </block>
                         </value>
                         <next>
-                          <block type="movement_left" id="11">
+                          <block type="robot_delay" id="8" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="9">
+                                <field name="NUM">2000</field>
+                              </block>
+                            </value>
                             <next>
-                              <block type="robot_delay" id="12" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="13">
-                                    <field name="NUM">1000</field>
+                              <block type="movement_left" id="11">
+                                <next>
+                                  <block type="robot_delay" id="12" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="13">
+                                        <field name="NUM">1000</field>
+                                      </block>
+                                    </value>
                                   </block>
-                                </value>
+                                </next>
                               </block>
                             </next>
                           </block>
@@ -55,7 +65,7 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
     </statement>
     <next>
