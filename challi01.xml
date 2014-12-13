@@ -8,38 +8,45 @@
           </block>
         </value>
         <next>
-          <block type="controls_if" id="392" inline="false">
-            <value name="IF0">
-              <block type="sensor_object" id="370">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_forward" id="443"></block>
-            </statement>
+          <block type="movement_stop" id="464">
             <next>
-              <block type="robot_delay" id="323" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="330">
-                    <field name="NUM">5000</field>
+              <block type="controls_if" id="392" inline="false">
+                <value name="IF0">
+                  <block type="sensor_object" id="370">
+                    <field name="OBJECT">LEFTFRONT</field>
                   </block>
                 </value>
+                <statement name="DO0">
+                  <block type="movement_forward" id="443"></block>
+                </statement>
                 <next>
-                  <block type="movement_forward" id="231">
+                  <block type="robot_delay" id="323" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="330">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
                     <next>
-                      <block type="robot_delay" id="338" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="363">
-                            <field name="NUM">5000</field>
-                          </block>
-                        </value>
+                      <block type="movement_forward" id="231">
                         <next>
-                          <block type="movement_leftmotor" id="203" inline="true">
-                            <value name="MOVLEFT">
-                              <block type="sensor_object" id="179">
-                                <field name="OBJECT">LEFTFRONT</field>
+                          <block type="robot_delay" id="338" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="363">
+                                <field name="NUM">5000</field>
                               </block>
                             </value>
+                            <next>
+                              <block type="movement_leftmotor" id="203" inline="true">
+                                <value name="MOVLEFT">
+                                  <block type="sensor_object" id="179">
+                                    <field name="OBJECT">LEFTFRONT</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_stop" id="481"></block>
+                                </next>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
