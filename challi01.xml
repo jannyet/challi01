@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_right" id="48" x="212" y="131">
+  <block type="movement_right" id="48" x="75" y="130">
     <next>
       <block type="movement_stop" id="464">
         <next>
@@ -8,7 +8,7 @@
               <block type="controls_if" id="392" inline="false">
                 <value name="IF0">
                   <block type="sensor_object" id="370">
-                    <field name="OBJECT">LEFTFRONT</field>
+                    <field name="OBJECT">LEFTSIDE</field>
                   </block>
                 </value>
                 <statement name="DO0">
