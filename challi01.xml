@@ -10,7 +10,7 @@
       <block type="controls_if" id="1" inline="false">
         <value name="IF0">
           <block type="sensor_object" id="2">
-            <field name="OBJECT">LEFTSIDE</field>
+            <field name="OBJECT">LEFTFRONT</field>
           </block>
         </value>
         <statement name="DO0">
@@ -43,19 +43,6 @@
                                 <field name="NUM">2000</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="movement_left" id="11">
-                                <next>
-                                  <block type="robot_delay" id="12" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="13">
-                                        <field name="NUM">1000</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
