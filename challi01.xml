@@ -46,30 +46,7 @@
           <block type="movement_right" id="104"></block>
         </statement>
         <statement name="ELSE">
-          <block type="movement_forward" id="129">
-            <next>
-              <block type="controls_if" id="154" inline="false">
-                <value name="IF0">
-                  <block type="logic_compare" id="162" inline="true">
-                    <field name="OP">EQ</field>
-                    <value name="A">
-                      <block type="sensor_object" id="183">
-                        <field name="OBJECT">LEFTSIDE</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="169">
-                        <field name="NUM">60</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="movement_left" id="193"></block>
-                </statement>
-              </block>
-            </next>
-          </block>
+          <block type="movement_forward" id="129"></block>
         </statement>
         <next>
           <block type="robot_delay" id="12" inline="true">
@@ -78,12 +55,15 @@
                 <field name="NUM">2000</field>
               </block>
             </value>
+            <next>
+              <block type="movement_stop" id="14"></block>
+            </next>
           </block>
         </next>
       </block>
     </statement>
     <next>
-      <block type="movement_stop" id="14"></block>
+      <block type="movement_right" id="203"></block>
     </next>
   </block>
 </xml>
